@@ -14,9 +14,11 @@ const Post = () => {
         {loading && <p>Carregando post...</p>}
         {post && (
           <>
-            <h1>{post.title}</h1>
             <img src={post.image} alt={post.title} />
-            <p>{post.body}</p>
+            <h1>{post.title}</h1>
+            <div className={styles.post_body}>
+              <p>{post.body}</p>
+            </div>            
             <h3>Este post trata sobre:</h3>
             <div className={styles.tags}>
             {post.tags.map((tag) => (
